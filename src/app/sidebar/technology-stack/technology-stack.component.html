@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" placeholder="Enter title" title="title" >
+        <br> <button class="btn btn-primary" >Add Title</button> 
+    </div>
+   
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">Backend</th>
+                        <th scope="col">Frontend</th>
+                        <th scope="col">BI</th>
+                        <th scope="col">Tools</th>
+                        <th scope="col">Add/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let d of data">
+                        <td>{{d.id}}</td>
+                        <td>{{d.backend}}</td>
+                        <td>{{d.frontend}}</td>
+                        <td>{{d.bI}}</td>
+                        <td>{{d.tools}}</td>
+                        <td> <button class="btn btn-primary">Add</button> &nbsp;<button class="btn btn-danger" (click)="onDelete(d.id)">Delete</button></td>
+                    </tr>
+                             
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="onSubmit()" routerLinkActive="active">Add</button> 
+    
+</div>
