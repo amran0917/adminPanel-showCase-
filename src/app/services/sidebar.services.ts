@@ -12,9 +12,6 @@ import { catchError } from 'rxjs/operators';
   })
 export class SidebarServices {
 
-    // tslint:disable-next-line: variable-name
-  //  private _furl = '../data/data.json';
-
    private furl = ' https://showcase-7de70.firebaseio.com/data.json';
    private durl = 'https://console.firebase.google.com/project/showcase-7de70/database/showcase-7de70/data~2Fdata~2F-M-hMLJLqIb_sFgEaGYg/';
     constructor(private http: HttpClient) { }

@@ -15,7 +15,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', component: AboutComponent, pathMatch: 'full' },
+
   { path: 'about', component: AboutComponent },
   { path: 'submit/:id', component: AboutComponent },
   {path: 'gis', component: GISComponent},
@@ -27,7 +27,8 @@ const routes: Routes = [
   {path: 'techstack', component: TechnologyStackComponent},
   {path: 'edit/:id', component: CommonComponent},
 
-  {path: 'addItem',component:AdditemComponent}
+  {path: 'addItem', component: AdditemComponent},
+  { path: '',  redirectTo:'/about', pathMatch: 'full' },
 ];
 
 @NgModule({
