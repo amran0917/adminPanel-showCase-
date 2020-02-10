@@ -16,6 +16,7 @@ export class SidebarServices {
   //  private _furl = '../data/data.json';
 
    private furl = ' https://showcase-7de70.firebaseio.com/data.json';
+   private durl = 'https://console.firebase.google.com/project/showcase-7de70/database/showcase-7de70/data~2Fdata~2F-M-hMLJLqIb_sFgEaGYg/';
     constructor(private http: HttpClient) { }
 
     getData() {
@@ -26,12 +27,11 @@ export class SidebarServices {
         return this.http.put<any>(this.furl , data);
       }
       deleteData(id: number) {
-        return this.http.delete(this.furl);
+        return this.http.delete(this.furl + id);
      }
 
     addData(servers: any) {
 
         return this.http.post<any>(this.furl, servers);
     }
- 
  }

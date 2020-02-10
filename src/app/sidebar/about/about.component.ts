@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   public data = [];
   public title: string ;
   public desc: string;
-  constructor(private router: Router,  private route: ActivatedRoute, private _sidebarservices: SidebarServices, public fb: FormBuilder) { 
+  constructor(private router: Router,  private route: ActivatedRoute, private sidebarservices: SidebarServices, public fb: FormBuilder) {
 
       this.about = this.fb.group({
           title : [''],
@@ -23,8 +23,6 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
-   // const id = this.about.get().value;
-    // const id = this.route.snapshot.paramMap.get('id');
     // if (id) {
 
     //      this._sidebarservices.getData().subscribe ( res =>{
@@ -61,7 +59,6 @@ export class AboutComponent implements OnInit {
   // onDelete(id){
   //   this._sidebarservices.deleteData(+id).subscribe(
   //     res =>{
-     
   //       console.log(res);
   //     }
   //   );
@@ -70,20 +67,19 @@ export class AboutComponent implements OnInit {
   //   console.log(this.pdata);
   // }
 
-  onSubmit()
-  {
+  onSubmit() {
     const formData = new FormData();
     formData.append('title', this.about.get('title').value);
     formData.append('desc', this.about.get('desc').value);
 
     console.log(this.about.value);
 
-    this._sidebarservices.addData(formData).subscribe( (response) => console.log(response));
+    this.sidebarservices.updateData(formData).subscribe( (response) => console.log(response));
   }
 
-  onDelete()
-  {
-    this._sidebarservices. deleteData(1).subscribe(
+  onDelete() {
+
+    this.sidebarservices. deleteData(1).subscribe(
      res => {
         console.log(res);
          }

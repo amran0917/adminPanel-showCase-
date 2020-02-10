@@ -1,3 +1,5 @@
+import { AdditemComponent } from './additem/additem.component';
+import { CommonComponent } from './common/common.component';
 import { TechnologyStackComponent } from './sidebar/technology-stack/technology-stack.component';
 import { ConsultancyComponent } from './sidebar/consultancy/consultancy.component';
 import { BIComponent } from './sidebar/bi/bi.component';
@@ -7,6 +9,7 @@ import { MonitoringAndEvaluationComponent } from './sidebar/monitoring-and-evalu
 import { GISComponent } from './sidebar/gis/gis.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AboutComponent } from './sidebar/about/about.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -21,7 +24,10 @@ const routes: Routes = [
   {path: 'mobile-app', component: MobileAppComponent},
   {path: 'bi', component: BIComponent},
   {path: 'consultancy', component: ConsultancyComponent},
-  {path: 'techstack', component: TechnologyStackComponent}
+  {path: 'techstack', component: TechnologyStackComponent},
+  {path: 'edit/:id', component: CommonComponent},
+
+  {path: 'addItem',component:AdditemComponent}
 ];
 
 @NgModule({

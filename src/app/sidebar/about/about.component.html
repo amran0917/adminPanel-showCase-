@@ -12,9 +12,9 @@
 
       
       <div class="form-group">
-    <!-- <a class = "btn btn-primary" >Submit</a> &nbsp; -- (click)="onSubmit()"-->
-      <a class="btn btn-primary"  (click)="onSubmit()">Update</a> &nbsp;
-      <a class="btn btn-danger" (click) = "onDelete()"  >Delete</a>
+
+      <a class="btn btn-primary"  (ngSubmit) = "onSubmit()">Update</a> &nbsp;
+      <a class="btn btn-danger" (ngSubmit) = "onDelete()">Delete</a>
     </div>
 
 </div>  

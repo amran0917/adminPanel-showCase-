@@ -17,6 +17,8 @@ import { TechnologyStackComponent } from './sidebar/technology-stack/technology-
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import { ContentComponent } from './content/content.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CommonComponent } from './common/common.component';
+import { AdditemComponent } from './additem/additem.component';
 
 
 
@@ -35,6 +37,8 @@ import {HttpClientModule} from '@angular/common/http';
     ConsultancyComponent,
     TechnologyStackComponent,
     ContentComponent,
+    CommonComponent,
+    AdditemComponent,
   ],
   imports: [
     BrowserModule,

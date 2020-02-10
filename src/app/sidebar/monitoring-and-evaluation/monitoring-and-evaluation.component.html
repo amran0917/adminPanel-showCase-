@@ -1,61 +1,46 @@
 <div class="container">
 
-    <div class="form-group">
-        <label for="title">Title:</label>
-        <input type="text" class="form-control" id="title" placeholder="Enter title" title="title" formControlName="title">
+  <div class="form-group" (ngSubmit)="onSubmit()">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter title" title="title" >
+  </div>
+  
+    <div class="form-group" (ngSubmit)="onSubmit()">
+      <label for="Description">Description</label>
+      <textarea class="form-control" id="Description" rows="3" ></textarea>
     </div>
-    
-      <div class="form-group">
-        <label for="Description">Description</label>
-        <textarea class="form-control" id="Description" rows="3" formControlName="desctription"></textarea>
-      </div>
 
-    
-      <button class="btn btn-primary">Save</button> 
+   
 
+  
+    <button class="btn btn-primary" (ngSubmit)="onSubmit()">update</button>
+    <br/>
 
 <div class="row">
-  <div class="col-12">
-    <table class="table table-bordered">
-      <thead>
-        <tr>              
-          <th scope="col">Name</th>
-          <th scope="col">Actions</th>
-          <th scope="col"><a class=" btn btn-info">(+) Add new Item</a></th>
+<div class="col-12">
+  <table class="table table-bordered">
+    <thead>
+      <tr>              
+        <th scope="col">Name</th>
+        <th scope="col">Actions</th>
+        <th scope="col"><a class=" btn btn-info" (click) = "onAddItem()">(+) Add new Item</a></th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">MobileApp_1</th>
+      </tr>
+    </thead>
+    <tbody>
     
+
+      <!-- <tr *ngFor = "let item of obj; let i=index;">
+          <th scope="row">Gis(i)</th>
+  
           <td>
-            <button type="button" class="btn btn-primary">Edit</button>     &nbsp;         
+            <button type="button" class="btn btn-primary" (click)="onEdit(i)">Edit</button>     &nbsp;         
              <button type="button" class="btn btn-danger">Delete</button>
           </td>
-        </tr>
-
-        <tr>
-            <th scope="row">MobileApp_2</th>
-    
-            <td>
-              <button type="button" class="btn btn-primary">Edit</button>     &nbsp;         
-               <button type="button" class="btn btn-danger">Delete</button>
-            </td>
-        </tr>
-        <tr>
-          <th scope="row">MobileApp_3</th>
-    
-          <td>
-            <button type="button" class="btn btn-primary">Edit</button> 
-            &nbsp;        
-             <button type="button" class="btn btn-danger">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      </tr> -->
+      
+    </tbody>
+  </table>
 </div>
 </div>
-
-
+</div>
