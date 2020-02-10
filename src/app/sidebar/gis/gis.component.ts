@@ -27,6 +27,7 @@ export class GISComponent implements OnInit {
 
   ngOnInit() {
     this.sidebarservices.getData().subscribe((response) => this.obj = response);
+    localStorage.setItem('index', '/gis');
   }
   onSubmit() {
     const formData = new FormData();

@@ -27,6 +27,7 @@ export class MobileAppComponent implements OnInit {
 
   ngOnInit() {
     this.sidebarservices.getData().subscribe((response) => this.obj = response);
+    localStorage.setItem('index', '/mobile-app');
   }
   onSubmit() {
     const formData = new FormData();

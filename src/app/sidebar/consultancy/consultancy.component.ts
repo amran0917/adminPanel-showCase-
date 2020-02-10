@@ -26,6 +26,7 @@ export class ConsultancyComponent implements OnInit {
 
   ngOnInit() {
     this.sidebarservices.getData().subscribe((response) => this.obj = response);
+    localStorage.setItem('index', '/consultancy');
   }
   onSubmit() {
     const formData = new FormData();

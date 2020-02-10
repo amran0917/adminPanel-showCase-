@@ -26,6 +26,7 @@ export class WebAppComponent implements OnInit {
 
   ngOnInit() {
     this.sidebarservices.getData().subscribe((response) => this.obj = response);
+    localStorage.setItem('index', 'web-app');
   }
   onSubmit() {
     const formData = new FormData();

@@ -13,11 +13,26 @@ export class AdditemComponent implements OnInit {
   constructor(private sidebarservices: SidebarServices, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
+   // localStorage.getItem('index');
   }
 
  onAdd() {
     console.log('added successfully!!!');
-    this.router.navigate(['/gis']);
-  }
+    if ( localStorage.getItem('index') === '/gis') {
+        this.router.navigate(['/gis']);
+    } else if (localStorage.getItem('index') === '/bi') {
+      this.router.navigate(['/bi']);
+   } else if (localStorage.getItem('index') === '/consultancy') {
+    this.router.navigate(['/consultancy']);
+    }  else if (localStorage.getItem('index') === '/mobile-app') {
+      this.router.navigate(['/mobile-app']);
+   } else if (localStorage.getItem('index') === '/m&e') {
+    this.router.navigate(['/m&e']);
+ }  else if (localStorage.getItem('index') === '/web-app') {
+  this.router.navigate(['/web-app']);
+}
+
+
+}
 
 }

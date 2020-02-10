@@ -26,6 +26,7 @@ export class BIComponent implements OnInit {
 
   ngOnInit() {
     this.sidebarservices.getData().subscribe((response) => this.obj = response);
+    localStorage.setItem('index', '/bi');
   }
   onSubmit() {
     const formData = new FormData();

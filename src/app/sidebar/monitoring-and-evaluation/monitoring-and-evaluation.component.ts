@@ -28,6 +28,7 @@ export class MonitoringAndEvaluationComponent implements OnInit {
 
  ngOnInit() {
    this.sidebarservices.getData().subscribe((response) => this.obj = response);
+   localStorage.setItem('index', 'm&e');
  }
  onSubmit() {
    const formData = new FormData();
