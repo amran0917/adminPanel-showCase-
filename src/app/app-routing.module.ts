@@ -1,3 +1,4 @@
+import { ContentComponent } from './content/content.component';
 import { AdditemComponent } from './additem/additem.component';
 import { CommonComponent } from './common/common.component';
 import { TechnologyStackComponent } from './sidebar/technology-stack/technology-stack.component';
@@ -36,3 +37,18 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+export const AppRoutingComponent = [
+  AboutComponent,
+   GISComponent,
+    MonitoringAndEvaluationComponent,
+    WebAppComponent,
+    MobileAppComponent,
+    BIComponent,
+    ConsultancyComponent,
+    TechnologyStackComponent,
+    ContentComponent,
+    CommonComponent,
+    AdditemComponent
+];
