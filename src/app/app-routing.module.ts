@@ -1,3 +1,4 @@
+import { TechupdateComponent } from './techupdate/techupdate.component';
 import { ContentComponent } from './content/content.component';
 import { AdditemComponent } from './additem/additem.component';
 import { CommonComponent } from './common/common.component';
@@ -29,6 +30,7 @@ const routes: Routes = [
   {path: 'edit/:id', component: CommonComponent},
 
   {path: 'addItem', component: AdditemComponent},
+  {path: 'techUpdate', component: TechupdateComponent},
   { path: '',  redirectTo:'/about', pathMatch: 'full' },
 ];
 
@@ -50,5 +52,6 @@ export const AppRoutingComponent = [
     TechnologyStackComponent,
     ContentComponent,
     CommonComponent,
-    AdditemComponent
+    AdditemComponent,
+    TechupdateComponent
 ];

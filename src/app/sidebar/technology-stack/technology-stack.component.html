@@ -2,7 +2,7 @@
     <div class="form-group">
         <label for="title">Title:</label>
         <input type="text" class="form-control" id="title" placeholder="Enter title" title="title" >
-        <br> <button class="btn btn-primary" >Add Title</button> 
+        <!-- <br> <button class="btn btn-primary" >Add Title</button>  -->
     </div>
 
 
@@ -19,20 +19,22 @@
                             
                                 <tr>
                                     <td class="tdLeft"><strong>Backend</strong></td>
-                                    <td class="tdRight"><strong><span></span>JAVA, C++, C#  &nbsp; <button class="btn btn-primary">Add</button>&nbsp; <button class="btn btn-danger">Delete</button></strong></td>
+                                    <td class="tdRight"><strong><span></span>JAVA, C++, C#  &nbsp; <button class="btn btn-primary float-right" (click)="onUpdateTech()">Update</button>&nbsp; </strong></td>
                                 </tr>
                               
                                 <tr>
                                     <td class="tdLeft"><strong>Frontend</strong></td>
-                                    <td class="tdRight"><strong><span></span>Angular JS, React JS &nbsp; <button class="btn btn-primary">Add</button>&nbsp; <button class="btn btn-danger">Delete</button> </strong></td>
+                                    <td class="tdRight"><strong><span></span>Angular JS, React JS &nbsp; <button class="btn btn-primary float-right" (click)="onUpdateTech()" >Update</button>&nbsp; </strong></td>
                                 </tr>
+
                                 <tr>
                                     <td class="tdLeft"><strong>BI</strong></td>
-                                    <td class="tdRight"><strong><span></span>Power BI &nbsp; <button class="btn btn-primary">Add</button>&nbsp; <button class="btn btn-danger">Delete</button> </strong></td>
+                                    <td class="tdRight"><strong><span></span>Power BI &nbsp; <button class="btn btn-primary float-right" (click)="onUpdateTech()" >Update</button>&nbsp;</strong></td>
                                 </tr>
+
                                 <tr>
                                     <td class="tdLeft"><strong>Tools</strong></td>
-                                    <td class="tdRight"><strong><span>Power BI</span> &nbsp; <button class="btn btn-primary">Add</button>&nbsp; <button class="btn btn-danger">Delete</button> </strong></td>
+                                    <td class="tdRight"><strong><span>Power BI</span> &nbsp; <button class="btn btn-primary float-right" (click)="onUpdateTech()" >Update</button>&nbsp;  </strong></td>
                                 </tr>
                       
                         </tbody>
@@ -78,13 +80,8 @@
                         <td>{{d.tools}}</td>
                         <td> <button class="btn btn-primary">Add</button> &nbsp;<button class="btn btn-danger" (click)="onDelete(d.id)">Delete</button></td>
                     </tr>
-                             
                 </tbody>
             </table>
         </div>
     </div> -->
-
-
-   
-    
 </div>

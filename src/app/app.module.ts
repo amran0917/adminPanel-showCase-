@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { TechupdateComponent } from './techupdate/techupdate.component';
 
 
 
@@ -20,7 +21,8 @@ import {HttpClientModule} from '@angular/common/http';
     AppComponent,
     NavbarComponent,
     SidebarComponent,
-    AppRoutingComponent
+    AppRoutingComponent,
+    TechupdateComponent
   ],
   imports: [
     BrowserModule,

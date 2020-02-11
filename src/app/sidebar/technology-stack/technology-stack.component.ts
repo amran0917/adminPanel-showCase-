@@ -48,4 +48,8 @@ export class TechnologyStackComponent implements OnInit {
     this.router.navigate(['/techstack']);
   }
 
+  onUpdateTech() {
+   this.router.navigate(['/techUpdate']);
+  }
+
 }
