@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/observable';
 import { About } from './../models/about.model';
-import { FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
+import { FormControl, FormGroup, Validators, FormBuilder,FormArray} from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
