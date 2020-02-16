@@ -31,15 +31,12 @@ export class TechnologyStackComponent implements OnInit {
      keep: any;
 
   techs: Technology[];
-  //techSelected: number;
+  // techSelected: number;
   techSelected: any = {};
   modifiedText: string;
 
-
-  // tslint:disable-next-line: variable-name
   constructor(private router: Router,  private route: ActivatedRoute,
-    private  _sidebarservices: SidebarServices, private formBuilder: FormBuilder) {
-  }
+              private  sidebarservices: SidebarServices, private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.myGroup =  this.formBuilder.group({
@@ -75,12 +72,12 @@ export class TechnologyStackComponent implements OnInit {
 
   // onSubmit() {
 
-  //   this._sidebarservices.addData(this.data).subscribe(d => this.data = d );
+  //   this.sidebarservices.addData(this.data).subscribe(d => this.data = d );
   //   console.log(this.data);
   // }
 
   // onReceive() {
-  //   this._sidebarservices.getData().subscribe(d => this.data2 = d );
+  //   this.sidebarservices.getData().subscribe(d => this.data2 = d );
   //   console.log(this.data2);
   // // }
   // onDelete(id: any) {
@@ -97,21 +94,21 @@ export class TechnologyStackComponent implements OnInit {
 
 
   addItem(id: any) {
-    console.log(this.val);
-
-    // if (id)
-    // {
-    //   this.myGroup.patchValue({backend: this.val});
-    // }
-    this.keep = this.data.Name;
 
     if (id) {
-        if (this.techSelected.techName === this.data.Name) {
 
-          this.myGroup.patchValue({keep: this.val});
+        if (this.techSelected.value === this.data.value) {
+          console.log(this.val);
+
+          // this.myGroup.patchValue({keep: this.val});
+          //   this.streamsTech[1]=['']
+
           // for ( let ss of this.streamsTech.controls) {
-          //   this.myGroup.patchValue({[this.data.Name]: this.val});
+          //   this.myGroup.patchValue({[0]: this.val});
           // }
+
+          
+          this.streamsTech.setValue([this.val]);
       }
     }
   }

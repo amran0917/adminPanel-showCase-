@@ -1,9 +1,8 @@
 
  <div class="container">       
     <br>    
-    <form [formGroup]="myGroup">
-
-        
+    <form [formGroup]="myGroup">   
+           
             <!-- <div class="row">
                 <div class="col-md-2 bg-secondary">Backend:</div> 
         
@@ -63,9 +62,9 @@
     <br>
     <div class ="row"> 
         <div  class="col-md-3">  
-            <select [(ngModel)] ="techSelected" (ngModelChange)= 'onTechSelected($event)'
+            <select  (ngModelChange)= "onTechSelected($event)" [(ngModel)] ="techSelected" 
                     class="browser-default custom-select" >
-                <option *ngFor ="let tec of techs" [ngValue] ="tec">
+                <option *ngFor ="let tec of techs;" [ngValue] ="tec">
                      {{tec.techName}}
                 </option>
 
