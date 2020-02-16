@@ -3,23 +3,32 @@ import {Router, ActivatedRoute} from '@angular/router';
 import { SidebarServices } from './../../services/sidebar.services';
 import { FormGroup, FormBuilder, Validators, FormControl, FormArray, NgForm } from '@angular/forms';
 import { Technology } from './Technologys';
-
+import { Technology2 } from './Technology2';
 @Component({
   selector: 'app-technology-stack',
   templateUrl: './technology-stack.component.html',
   styleUrls: ['./technology-stack.component.css']
 })
 export class TechnologyStackComponent implements OnInit {
-//   public data = [{id: 1, backend: 'c', frontend: 'Usman', bI: 'kens', tools: 'habijabi'},
-//   {id: 2, backend: 'java', frontend: 'esdf', bI: 'fdsfd', tools: 'habijabi'},
-//   {id: 3, backend: 'C++', frontend: 'angula', bI: 'janina', tools: 'bootstrap'},
 
+  data: any = [
+    {Name: 'backend', Description: '.NET,PHP'},
+    {Name: 'frontend', Description: 'C++,Java'},
+    {Name: 'bi', Description: 'janina'},
+    {Name: 'tools', Description: 'node.js'},
+];
 
-// ];
 //   public data2: any;
-//   rows: FormArray;
+// //   rows: FormArray; { backend: 'c', frontend: 'Usman', bI: 'kens', tools: 'habijabi'},
+//   { backend: 'java', frontend: 'esdf', bI: 'fdsfd', tools: 'habijabi'},
+//   { backend: 'C++', frontend: 'angula', bI: 'janina', tools: 'bootstrap'},
+//   { backend: 'java', frontend: 'esdf', bI: 'fdsfd', tools: 'habijabi'},
+//   { backend: 'C++', frontend: 'angula', bI: 'janina', tools: 'bootstrap'},
 //   fb: any;
      myGroup: any;
+     val: any;
+
+     keep: any;
 
   techs: Technology[];
   //techSelected: number;
@@ -34,11 +43,7 @@ export class TechnologyStackComponent implements OnInit {
 
   ngOnInit() {
     this.myGroup =  this.formBuilder.group({
-      backend : [''],
-      frontend: [''],
-      bi: [''],
-      tools: [''],
-      aliases: this.formBuilder.array([
+      streamsTech: this.formBuilder.array([
         this.formBuilder.control('')
       ])
   });
@@ -48,7 +53,6 @@ export class TechnologyStackComponent implements OnInit {
     {techId : 2, techName: 'frontend'},
     {techId : 3, techName: 'bi'},
     {techId : 4, techName: 'tools'}];
-    
   //  this.techSelected = 1;
 
   }
@@ -58,12 +62,11 @@ export class TechnologyStackComponent implements OnInit {
 
 
   }
-  get aliases() {
-    return this.myGroup.get('aliases') as FormArray;
+  get streamsTech() {
+    return this.myGroup.get('streamsTech') as FormArray;
   }
-  
-  addAlias() {
-    this.aliases.push(this.formBuilder.control(''));
+  addStreamsTech( ) {
+    this.streamsTech.push(this.formBuilder.control(''));
   }
 
   // addButtonClick(): void {
@@ -92,15 +95,24 @@ export class TechnologyStackComponent implements OnInit {
    this.router.navigate(['/techUpdate']);
   }
 
+
   addItem(id: any) {
-    this.myGroup.setValue({
-      backend: 'abc',
-      frontend: 'def',
-      bi: 'sfd',
-      tools: 'ci'
-   });
+    console.log(this.val);
+
+    // if (id)
+    // {
+    //   this.myGroup.patchValue({backend: this.val});
+    // }
+    this.keep = this.data.Name;
+
+    if (id) {
+        if (this.techSelected.techName === this.data.Name) {
+
+          this.myGroup.patchValue({keep: this.val});
+          // for ( let ss of this.streamsTech.controls) {
+          //   this.myGroup.patchValue({[this.data.Name]: this.val});
+          // }
+      }
+    }
   }
-
-    
-
 }
